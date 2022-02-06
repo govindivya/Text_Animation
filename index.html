@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+
+  *,
+  ::after,
+  ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  .container {
+    width: 100%;
+    height: 100vh;
+    background-color: #111;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  svg {
+    font-size: 150px;
+  }
+
+  .copy {
+    fill: none;
+    stroke: #fff;
+    stroke-width: 2px;
+    stroke-dasharray: 8% 30%;
+    stroke-dashoffset: 0%;
+    animation: textAnimation 6s linear infinite;
+  }
+  @keyframes textAnimation{
+    100%{
+      stroke-dashoffset: -35%;
+    }
+  }
+  .copy1{
+    stroke: orange;
+    animation-delay:-1s;
+  }
+  .copy2{
+    stroke: red;
+    animation-delay:-2s;
+  }  .copy3{
+    stroke: green;
+    animation-delay:-3s;
+  }  .copy4{
+    stroke: blue;
+    animation: delay -4s;
+  }  .copy5{
+    stroke: tomato;
+    animation-delay:-5s;
+  }
+
+</style>
+
+<body>
+  <div class="container">
+    <svg viewBox="0 0 1000 400">
+      <text id="mytext" x="50%" y="50%" text-anchor="middle" fill:"none"> WELCOME </text>
+      <use xlink:href="#mytext" class="copy copy1"></use>
+      <use xlink:href="#mytext" class="copy copy2"></use>
+      <use xlink:href="#mytext" class="copy copy3"></use>
+      <use xlink:href="#mytext" class="copy copy4"></use>
+      <use xlink:href="#mytext" class="copy copy5"></use>
+    </svg>
+  </div>
+</body>
+
+</html>
